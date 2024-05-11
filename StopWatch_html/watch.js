@@ -44,9 +44,9 @@ const stop =()=>{
 }
 
 const reset = ()=>{
-    load(0,0,0,0);
     set_status(0);
     clearInterval(intervalId);
+    load(0,0,0,0);
     bttn_disable(0);
 }
 
@@ -94,5 +94,10 @@ const load =(ms, s, m ,h)=>{
     (s> 10)? seconds.innerText=s: seconds.innerText="0 : "+s;
     (m> 10)? minute.innerText=m: minute.innerText="0 : "+m;
     (h> 10)? hour.innerText=h: hour.innerText="0 : "+h;
+
+    time.ms = ms;
+    time.s = s;
+    time.m = m;
+    time.h = h;
 
 }
